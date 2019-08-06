@@ -1,0 +1,8 @@
+{
+  "domain": "hotmovies",
+  "name": "hotmovies",
+  "documentation": "https://github.com/aalavender/HotMovies/blob/master/README.md",
+  "dependencies": [],
+  "codeowners": ["@aalavender"],
+  "requirements": ["requests", "beautifulsoup4"]
+}
