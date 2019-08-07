@@ -23,7 +23,8 @@ sensor:
 建议采用[list-card](https://github.com/custom-cards/list-card)进行展示，效果是这样的
 
 ![avatar](https://github.com/aalavender/HotMovies/blob/master/2.PNG)
-lovelace-ui配置：
+
+list-card 的lovelace-ui配置：
 ```
     cards:
       - columns:
