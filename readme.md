@@ -23,3 +23,22 @@ sensor:
 建议采用[list-card](https://github.com/custom-cards/list-card)进行展示，效果是这样的
 
 ![avatar](https://github.com/aalavender/HotMovies/blob/master/2.PNG)
+lovelace-ui配置：
+```
+    cards:
+      - columns:
+          - field: title
+            style:
+              - height: 30px
+            title: 电影名称
+          - field: day
+            title: 昨日票房
+          - field: total
+            title: 累积
+          - field: ptime
+            title: 发布时间
+        entity: sensor.re_ying_dian_ying
+        feed_attribute: entries
+        title: 热映电影
+        type: 'custom:list-card'
+```
