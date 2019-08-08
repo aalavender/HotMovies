@@ -41,6 +41,7 @@ class HotMoviesSensor(Entity):
 
     def update(self):
         _LOGGER.info("HotMoviesSensor update info from http://58921.com/ ")
+        self._entries = []
         header = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36'
         }
