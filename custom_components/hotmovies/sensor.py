@@ -6,6 +6,7 @@ https://github.com/aalavender/HotMovies/
 
 """
 import logging
+import asyncio
 import voluptuous as vol
 from datetime import timedelta
 from homeassistant.helpers.entity import Entity
@@ -28,16 +29,18 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Required(CONF_NAME): cv.string,
 })
 
-def setup_platform(hass, config, add_devices, discovery_info=None):
-    add_devices([HotMoviesSensor(hass, config)])
+
+@asyncio.coroutine
+def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
+    _LOGGER.info("async_setup_platform sensor HotMoviesSensor")
+    async_add_devices([HotMoviesSensor(config[CONF_NAME])], True)
+
 
 class HotMoviesSensor(Entity):
-    def __init__(self, hass, config):
-        self.hass = hass
-        self._name = config[CONF_NAME]
+    def __init__(self, name):
+        self._name = name
         self._state = None
         self._entries = []
-        self.update()
 
     def update(self):
         _LOGGER.info("HotMoviesSensor update info from http://58921.com/ ")
