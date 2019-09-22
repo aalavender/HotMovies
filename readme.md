@@ -33,9 +33,9 @@ list-card 的lovelace-ui配置：
               - height: 30px
             title: 电影名称
           - field: day
-            title: 昨日票房
+            title: 今日票房
           - field: total
-            title: 累积
+            title: 累积票房
           - field: ptime
             title: 发布时间
         entity: sensor.re_ying_dian_ying
