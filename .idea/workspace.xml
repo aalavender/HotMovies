@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="003aaa1a-606f-45af-a0e1-8237b5b8e958" name="Default Changelist" comment="修复了越加越多的bug">
-      <change afterPath="$PROJECT_DIR$/.idea/HotMovies.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="003aaa1a-606f-45af-a0e1-8237b5b8e958" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom_components/hotmovies/sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/custom_components/hotmovies/sensor.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/custom_components/hotmovies/sensor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+            <state relative-caret-position="360">
+              <caret line="57" column="37" lean-forward="true" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
               <folding>
                 <element signature="e#198#212#0" expanded="true" />
               </folding>
@@ -162,7 +158,7 @@
       <workItem from="1565352795890" duration="52000" />
       <workItem from="1565436963582" duration="24000" />
       <workItem from="1566267931506" duration="478000" />
-      <workItem from="1569136896181" duration="2004000" />
+      <workItem from="1569136896181" duration="2450000" />
     </task>
     <task id="LOCAL-00001" summary="项目测试版完成">
       <created>1565097486670</created>
@@ -185,11 +181,18 @@
       <option name="project" value="LOCAL" />
       <updated>1566268362778</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="因为数据源发生变化而更新">
+      <created>1569139243302</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569139243303</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13053000" />
+    <option name="totallyTimeSpent" value="13499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
@@ -225,7 +228,8 @@
     <MESSAGE value="项目测试版完成" />
     <MESSAGE value="修复了越加越多的bug" />
     <MESSAGE value="修改成异步更新，加快ha启动速度" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改成异步更新，加快ha启动速度" />
+    <MESSAGE value="因为数据源发生变化而更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="因为数据源发生变化而更新" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/readme.md">
@@ -254,8 +258,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/custom_components/hotmovies/sensor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        <state relative-caret-position="360">
+          <caret line="57" column="37" lean-forward="true" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
           <folding>
             <element signature="e#198#212#0" expanded="true" />
           </folding>
