@@ -40,6 +40,7 @@ class HotMoviesSensor(Entity):
     def __init__(self, name):
         self._name = name
         self._state = None
+        self._update_time = None
         self._entries = []
 
     def update(self):
@@ -51,16 +52,15 @@ class HotMoviesSensor(Entity):
         response = request('GET', 'http://58921.com/', headers=header)  # 定义头信息发送请求返回response对象
         response.encoding = 'utf-8'   #不写这句会乱码
         soup = BeautifulSoup(response.text, "lxml")
-        trs = soup.select('#front_block_top_day > div > table > tbody > tr')
+        trs = soup.select('#box_office_live_summary > div > table > tbody > tr')
         self._state = len(trs)
-        for tr in trs:
+        self._update_time = trs[len(trs)-1].text[12:].strip()
+        for i in range(0, self.state-1):
             entryValue = {}
-            tds = tr.select('td')
+            tds = trs[i].select('td')
             entryValue["title"] = tds[0].text
-            entryValue["day"] = tds[1].text
-            entryValue["total"] = tds[2].text
-            entryValue["ptime"] = tds[1].get('title')[5:]
-
+            entryValue["day"] = tds[3].text
+            entryValue["total"] = tds[4].text
             self._entries.append(entryValue)
 
     @property
@@ -74,6 +74,10 @@ class HotMoviesSensor(Entity):
     @property
     def icon(self):
         return ICON
+
+    @property
+    def update_time(self):
+        return self._update_time
 
     @property
     def device_state_attributes(self):
